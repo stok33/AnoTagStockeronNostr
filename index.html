@@ -1,22 +1,23 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>あのたぐさーちゃonNostr</title>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <script src="https://unpkg.com/nostr-tools/lib/nostr.bundle.js"></script>
-  <script src="main.js"></script>
+    <title>あのたぐさーちゃonNostr</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <script src="https://unpkg.com/nostr-tools/lib/nostr.bundle.js"></script>
+    <script src="main.js"></script>
+    <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
   <h1>あのたぐさーちゃonNostr</h1>
-  <label for="npubInput">公開鍵： </label>
-  <input type="text" id="npubInput" placeholder="npub〜">
+  <label for="npubInput">公開鍵：&nbsp;&nbsp;</label>
+  <input class="custom-input"　type="text" id="npubInput" placeholder="npub〜">
   <br>
   <label for="TagInput">＃タグ：#</label>
-  <input type="text" id="TagInput" placeholder="#は入れない">
+  <input class="custom-input"　type="text" id="tagInput" placeholder="#は入れない">
   <br>
-  <label for="relayInput">リレー： </label>
-  <input type="text" id="relayInput" placeholder="wss://〜" value="wss://relay-jp.nostr.wirednet">
+  <label for="relayInput">リレー：&nbsp;&nbsp;</label>
+  <input class="custom-input"　type="text" id="relayInput" placeholder="wss://〜" value="wss://relay-jp.nostr.wirednet.jp">
   <br>
   <input type="radio" name="displayOption" value="all" id="allPosts" checked>
   <label for="allPosts">すべての投稿を表示</label>
