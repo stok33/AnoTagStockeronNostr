@@ -1,31 +1,37 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Nostr井ラスト倉庫</title>
+  <title>あのたぐさーちゃonNostr</title>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <link rel="icon" href="./井.ico">
   <script src="https://unpkg.com/nostr-tools/lib/nostr.bundle.js"></script>
   <script src="main.js"></script>
 </head>
 <body>
-  <h1>Nostr井ラスト倉庫</h1>
+  <h1>あのたぐさーちゃonNostr</h1>
   <input type="text" id="npubInput" placeholder="公開鍵(npub〜)を入力">
+  
+  <input type="text" id="TagInput" placeholder="検索したいハッシュタグ(#は入れない)を入力">
+  
+  <input type="text" id="relayInput" placeholder="リレーURL(例:wss://relay-jp.nostr.wirednet.jp)を入力">
+  
+  <input type="radio" name="displayOption" value="all" id="allPosts" checked>
+  <label for="allPosts">すべての投稿を表示</label>
+  <input type="radio" name="displayOption" value="images" id="imagePosts">
+  <label for="imagePosts">画像付きのみを表示</label>
+  
   <button onclick="searchPosts()">検索！</button>
     <div id="alertarea">
       <!-- アラート内容-->
     </div>
   <p>サンプルnpub(作成者・崇徳の公開鍵)：npub1e09suzmq9mp6nt0ud9ttl03790qjx70wzwlc2pwwghcusvwju54qs0c800</p>
   <ul>
-    <li>公開鍵で指定したアカウントが投稿している「#illust」タグつきの投稿を100件まで表示するよ</li>
-    <li>githubは<a href=https://github.com/stok33/NostrIllustStock>こちら</a></li>
-    <li>リレーは「wss://relay-jp.nostr.wirednet.jp」をみています（つまりこのリレーを追加した後に投稿されたものを取得します）</li>
+    <li>任意のユーザー(の公開鍵)のハッシュタグ付き投稿を指定して100件まで表示します。リレーも指定できます</li>
+    <li>自分のタグ付き投稿の振り返りなどにお使いください</li>
     <li>最後のnote~はnoteIDです　多くのクライアントで検索欄に貼り付けるとその投稿に飛べると思います</li>
-    <li>「#illust」がついた投稿の画像を一覧で見たい場合はmurakmiiさんの<a href="https://nostr-illust.vercel.app/">#illust tagged notes on Nostr</a>があります</li>
-    <li>イラストを投稿するときは是非「#illust」をつけて投稿しよう！</li>
-    <li>NIP-36(閲覧注意)対応しました！「content-warning！閲覧するにはクリック」と表示されます</li>
+    <li>NIP-36(閲覧注意)対応済み</li>
+    <li>githubは<a href=https://github.com/stok33/AnoTagSearcheronNostr>こちら</a></li>
   </ul>
-  <img src="./倉庫.png" width="300" height="auto">
       
       <hr>
       
