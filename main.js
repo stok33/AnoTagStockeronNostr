@@ -177,20 +177,11 @@ const searchPosts = async () => {
                                     // クリック時の処理：画像を表示する
                                     sensitiveContent.innerHTML = ''; // テキストをクリア
                                     
-                                    // ryoさんの36避けサービス用にURLを置換する関数を作成
-                                    function replaceImageUrl(url) {
-                                        if (url.startsWith("https://i.ryogrid.net/i/")) {
-                                            return url.replace("https://i.ryogrid.net/i/", "https://cdn.nostr.build/i/");
-                                        }
-                                        return url;
-                                    }
                                     
                                     // 画像を表示するための要素を作成
                                     for (const match of imgMatches) {
                                         const SensitiveimageUrl = match[0];
                                         
-                                        //ryoさんのサービス用関数に引数として画像URLを渡す
-                                        const convertedImageUrl = replaceImageUrl(SensitiveimageUrl);
                                         
                                         // 画像を表示するための要素を作成
                                         const Sensitiveimage = document.createElement("img");
@@ -282,20 +273,10 @@ const searchPosts = async () => {
                                      // クリック時の処理：画像を表示する
                                      sensitiveContent.innerHTML = ''; // テキストをクリア
                                      
-                                     // ryoさんの36避けサービス用にURLを置換する関数を作成
-                                     function replaceImageUrl(url) {
-                                         if (url.startsWith("https://i.ryogrid.net/i/")) {
-                                             return url.replace("https://i.ryogrid.net/i/", "https://cdn.nostr.build/i/");
-                                         }
-                                         return url;
-                                     }
                                      
                                      // 画像を表示するための要素を作成
                                      for (const match of imgMatches) {
                                          const SensitiveimageUrl = match[0];
-                                         
-                                         //ryoさんのサービス用関数に引数として画像URLを渡す
-                                         const convertedImageUrl = replaceImageUrl(SensitiveimageUrl);
                                          
                                          // 画像を表示するための要素を作成
                                          const Sensitiveimage = document.createElement("img");
