@@ -133,9 +133,11 @@ const searchPosts = async () => {
         // センシティブなコンテンツのチェック
         const isSensitive = tags.some(tag => tag[0] === 'content-warning');
         
-        //noteidをNIP-19ぱわーでnote~形式に直す
-        const noteId = NostrTools.nip19.noteEncode(Id);
-
+	const noteId = NostrTools.nip19.noteEncode(Id); //noteidをnote~形式に直す
+	    console.log("noteId:", noteId);
+     　 const nevent = NostrTools.nip19.neventEncode({id: Id}); //neventに直す
+	    console.log("nevent:", nevent);
+	     
         // 投稿を表示するための要素を作成
         const postContainer = document.createElement("div");
       
@@ -200,10 +202,12 @@ const searchPosts = async () => {
                                     // テキスト部分を投稿表示のための要素 postContainer に追加
                                     sensitiveContent.appendChild(Sensitivetext);
                                     
-                                    // noteidの表示
-                                    const idElement = document.createElement("div");
-                                    idElement.textContent = noteId;
-                                    postContainer.appendChild(idElement);
+                                    ///nevent→njumpのリンク
+            			  const neventElement = document.createElement("a"); 
+	　　			　　neventElement.href = `https://nostr.com/${nevent}`; 
+	　　			　　neventElement.textContent = "投稿をみる(njump)"; 
+	　　			　　neventElement.target = "_blank"; 
+	　　			　　postContainer.appendChild(neventElement); 
                                 }
                                 
                             });
@@ -235,10 +239,12 @@ const searchPosts = async () => {
                             //テキスト部分を投稿表示のための要素postContainerに追加
                             postContainer.appendChild(textContainer);
                             
-                            //noteidの表示
-                            const idElement = document.createElement("div");
-                            idElement.textContent = noteId;
-                            postContainer.appendChild(idElement);
+                           //nevent→njumpのリンク
+           		   const neventElement = document.createElement("a"); 
+			　　　　neventElement.href = `https://nostr.com/${nevent}`; 
+			　　　　neventElement.textContent = "投稿をみる(njump)"; 
+			　　　　neventElement.target = "_blank"; 
+			　　　　postContainer.appendChild(neventElement); 
                          }
                      break;
                         
@@ -295,10 +301,12 @@ const searchPosts = async () => {
                                      // テキスト部分を投稿表示のための要素 postContainer に追加
                                      sensitiveContent.appendChild(Sensitivetext);
                                      
-                                     // noteidの表示
-                                     const idElement = document.createElement("div");
-                                     idElement.textContent = noteId;
-                                     postContainer.appendChild(idElement);
+                                     //nevent→njumpのリンク
+              const neventElement = document.createElement("a"); 
+	　　　　neventElement.href = `https://nostr.com/${nevent}`; 
+	　　　　neventElement.textContent = "投稿をみる(njump)"; 
+	　　　　neventElement.target = "_blank"; 
+	　　　　postContainer.appendChild(neventElement); 
                                  }
                                  
                              });
@@ -332,11 +340,12 @@ const searchPosts = async () => {
                              //テキスト部分を投稿表示のための要素postContainerに追加
                              postContainer.appendChild(textContainer);
                              
-                             //noteidの表示
-                             const idElement = document.createElement("div");
-                             idElement.textContent = noteId;
-                             postContainer.appendChild(idElement);
-                             break;
+                           //nevent→njumpのリンク
+              const neventElement = document.createElement("a"); 
+	　　　　neventElement.href = `https://nostr.com/${nevent}`; 
+	　　　　neventElement.textContent = "投稿をみる(njump)"; 
+	　　　　neventElement.target = "_blank"; 
+	　　　　postContainer.appendChild(neventElement); 
                              
                              
                              //画像なしの場合、なにもしない
