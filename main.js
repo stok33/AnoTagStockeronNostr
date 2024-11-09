@@ -16,11 +16,11 @@ const searchPosts = async () => {
             npub = data.pubkey;
     		break;
   		case "nsec":
-            console.error("エラー: これは秘密鍵…　公開鍵はnpubで始まる方");
-            alert("わわ！これは秘密鍵じゃ！秘密にするのじゃ〜！！");
+            console.error("Do not enter nsec!!");
+            alert("秘密鍵は秘密にしておいて！(npub~の方を入力)");
   		default:
-            console.error("エラー：これは…公開鍵じゃないね　");
-            alert("公開鍵じゃないな　……何じゃ？");
+            console.error("Please enter public key(npub~)");
+            alert("何の文字列かわからない…(npub~のやつを入力)");
             break;
 	}
     //タグを入力欄から取得
