@@ -132,7 +132,8 @@ const searchPosts = async () => {
         
         // センシティブなコンテンツのチェック
         const isSensitive = tags.some(tag => tag[0] === 'content-warning');
-        
+
+	//idからnoteid, neventに変換
 	const noteId = NostrTools.nip19.noteEncode(Id); //noteidをnote~形式に直す
 	    console.log("noteId:", noteId);
      　 const nevent = NostrTools.nip19.neventEncode({id: Id}); //neventに直す
