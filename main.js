@@ -159,7 +159,6 @@ const searchPosts = async () => {
                             const sensitiveContent = document.createElement("div");
                             const sensitiveText = document.createElement("div");
                             sensitiveText.textContent = "[content-warning！閲覧するにはクリック]";
-                            sensitiveText.style.color = "red"; // テキストの色を赤に設定
                             sensitiveText.style.cursor = "pointer"; // カーソルをポインターに変更
                             sensitiveContent.appendChild(sensitiveText);
                             
@@ -168,7 +167,6 @@ const searchPosts = async () => {
                             if (reasonTag && reasonTag[1]) {
                                 const reasonElement = document.createElement("div");
                                 reasonElement.textContent = `理由: ${reasonTag[1]}`;
-                                reasonElement.style.color = "red"; // テキストの色を赤に設定
                                 sensitiveContent.appendChild(reasonElement);
                             }
                             
@@ -203,10 +201,10 @@ const searchPosts = async () => {
                                     // テキスト部分を投稿表示のための要素 postContainer に追加
                                     sensitiveContent.appendChild(Sensitivetext);
                                     
-                                    ///nevent→njumpのリンク
+                                    ///nevent→nostterのリンク
             			  const neventElement = document.createElement("a"); 
-	　　			　　neventElement.href = `https://nostr.com/${nevent}`; 
-	　　			　　neventElement.textContent = "投稿をみる(njump)"; 
+	　　			　　neventElement.href = `https://nostter.app/${nevent}`; 
+	　　			　　neventElement.textContent = "投稿をみる(nostter)"; 
 	　　			　　neventElement.target = "_blank"; 
 	　　			　　postContainer.appendChild(neventElement); 
                                 }
@@ -240,12 +238,12 @@ const searchPosts = async () => {
                             //テキスト部分を投稿表示のための要素postContainerに追加
                             postContainer.appendChild(textContainer);
                             
-                           //nevent→njumpのリンク
-           		   const neventElement = document.createElement("a"); 
-			　　　　neventElement.href = `https://nostr.com/${nevent}`; 
-			　　　　neventElement.textContent = "投稿をみる(njump)"; 
-			　　　　neventElement.target = "_blank"; 
-			　　　　postContainer.appendChild(neventElement); 
+                           ///nevent→nostterのリンク
+            			  const neventElement = document.createElement("a"); 
+	　　			　　neventElement.href = `https://nostter.app/${nevent}`; 
+	　　			　　neventElement.textContent = "投稿をみる(nostter)"; 
+	　　			　　neventElement.target = "_blank"; 
+	　　			　　postContainer.appendChild(neventElement); 
                          }
                      break;
                         
@@ -302,12 +300,12 @@ const searchPosts = async () => {
                                      // テキスト部分を投稿表示のための要素 postContainer に追加
                                      sensitiveContent.appendChild(Sensitivetext);
                                      
-                                     //nevent→njumpのリンク
-              const neventElement = document.createElement("a"); 
-	　　　　neventElement.href = `https://nostr.com/${nevent}`; 
-	　　　　neventElement.textContent = "投稿をみる(njump)"; 
-	　　　　neventElement.target = "_blank"; 
-	　　　　postContainer.appendChild(neventElement); 
+                                     ///nevent→nostterのリンク
+            			  const neventElement = document.createElement("a"); 
+	　　			　　neventElement.href = `https://nostter.app/${nevent}`; 
+	　　			　　neventElement.textContent = "投稿をみる(nostter)"; 
+	　　			　　neventElement.target = "_blank"; 
+	　　			　　postContainer.appendChild(neventElement); 
                                  }
                                  
                              });
@@ -341,12 +339,12 @@ const searchPosts = async () => {
                              //テキスト部分を投稿表示のための要素postContainerに追加
                              postContainer.appendChild(textContainer);
                              
-                           //nevent→njumpのリンク
-              const neventElement = document.createElement("a"); 
-	　　　　neventElement.href = `https://nostr.com/${nevent}`; 
-	　　　　neventElement.textContent = "投稿をみる(njump)"; 
-	　　　　neventElement.target = "_blank"; 
-	　　　　postContainer.appendChild(neventElement); 
+                           ///nevent→nostterのリンク
+            			  const neventElement = document.createElement("a"); 
+	　　			　　neventElement.href = `https://nostter.app/${nevent}`; 
+	　　			　　neventElement.textContent = "投稿をみる(nostter)"; 
+	　　			　　neventElement.target = "_blank"; 
+	　　			　　postContainer.appendChild(neventElement); 
                              
                              
                              //画像なしの場合、なにもしない
